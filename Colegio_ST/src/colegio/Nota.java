@@ -3,12 +3,12 @@ package colegio;
 import java.util.Objects;
 
 public class Nota {
+    //Atributos
 
-    //Atributo
     private double nota;
     private String asignatura;
 
-    //Constructor
+    //Constructores
     public Nota(double nota, String asignatura) {
         this.nota = nota;
         this.asignatura = asignatura;
@@ -33,7 +33,10 @@ public class Nota {
 
     @Override
     public String toString() {
-        return "Nota{" + "nota=" + nota + ", asignatura=" + asignatura + '}';
+        String resultado = "";
+        resultado += "Nota: " + this.nota + "\n";
+        resultado += "Asignatura: " + this.asignatura + "\n";
+        return resultado;
     }
 
     @Override
@@ -48,7 +51,8 @@ public class Nota {
             return false;
         }
         final Nota other = (Nota) obj;
-        if (Double.doubleToLongBits(this.nota) != Double.doubleToLongBits(other.nota)) {
+        if (Double.doubleToLongBits(this.nota) != 
+                Double.doubleToLongBits(other.nota)) {
             return false;
         }
         if (!Objects.equals(this.asignatura, other.asignatura)) {
@@ -56,5 +60,6 @@ public class Nota {
         }
         return true;
     }
-
+    
+    
 }

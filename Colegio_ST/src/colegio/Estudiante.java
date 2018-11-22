@@ -4,16 +4,17 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Estudiante {
-
     //Atributos
+
     private String run;
     private String nombre;
     private String apellidos;
     private int edad;
+
     //Relaciones
     private ArrayList<Nota> notas;
 
-    //Constructor
+    //Constructores
     public Estudiante(String run, String nombre, String apellidos, int edad) {
         this.run = run;
         this.nombre = nombre;
@@ -26,21 +27,17 @@ public class Estudiante {
     public void addNota(Nota nota) {
         this.notas.add(nota);
     }
-
-    public int sizeNota() {
+    
+     public int sizeNota() {
         return this.notas.size();
     }
-    
-    public Nota getNota(int i){
-        return this.notas.get(i);
-    }
-
+     
     public double promedioEstudiante() {
         double promedio = 0;
         for (int i = 0; i < this.notas.size(); i++) {
             promedio += notas.get(i).getNota();
         }
-        promedio = (promedio / this.notas.size());
+        promedio = promedio / this.notas.size();
         return promedio;
     }
 
@@ -78,7 +75,12 @@ public class Estudiante {
 
     @Override
     public String toString() {
-        return "Estudiante{" + "run=" + run + ", nombre=" + nombre + ", apellidos=" + apellidos + ", edad=" + edad + '}';
+        String resultado = "";
+        resultado += "RUN: " + this.run + "\n";
+        resultado += "Nombre: " + this.nombre + "\n";
+        resultado += "Apellido: " + this.apellidos + "\n";
+        resultado += "Edad: " + this.edad + "\n";
+        return resultado;
     }
 
     @Override
@@ -93,16 +95,7 @@ public class Estudiante {
             return false;
         }
         final Estudiante other = (Estudiante) obj;
-        if (this.edad != other.edad) {
-            return false;
-        }
         if (!Objects.equals(this.run, other.run)) {
-            return false;
-        }
-        if (!Objects.equals(this.nombre, other.nombre)) {
-            return false;
-        }
-        if (!Objects.equals(this.apellidos, other.apellidos)) {
             return false;
         }
         return true;

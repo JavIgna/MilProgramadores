@@ -7,14 +7,14 @@ public class Curso {
 
     //Atributos
     private String codigo;
-    private int nivel;
+    private String nivel;
     private String tipo;
 
     //Relaciones
     private ArrayList<Estudiante> estudiantes;
 
-    //Constructor
-    public Curso(String codigo, int nivel, String tipo) {
+    //Constructores
+    public Curso(String codigo, String nivel, String tipo) {
         this.codigo = codigo;
         this.nivel = nivel;
         this.tipo = tipo;
@@ -50,12 +50,6 @@ public class Curso {
         return is;
     }
 
-    public void mostrarEstudiantes() {
-        for (Estudiante estudiante : estudiantes) {
-            estudiante.toString();
-        }
-    }
-
     public Estudiante searchEstudiante(int index) {
         return this.estudiantes.get(index);
     }
@@ -74,11 +68,11 @@ public class Curso {
         for (int i = 0; i < this.estudiantes.size(); i++) {
             promedio += this.estudiantes.get(i).promedioEstudiante();
         }
-        promedio = (promedio / this.estudiantes.size());
+        promedio = promedio / this.estudiantes.size();
         return promedio;
     }
 
-    public String getCodigo() {
+public String getCodigo() {
         return codigo;
     }
 
@@ -86,11 +80,11 @@ public class Curso {
         this.codigo = codigo;
     }
 
-    public int getNivel() {
+    public String getNivel() {
         return nivel;
     }
 
-    public void setNivel(int nivel) {
+    public void setNivel(String nivel) {
         this.nivel = nivel;
     }
 
@@ -102,13 +96,21 @@ public class Curso {
         this.tipo = tipo;
     }
 
+//    public int consultarPromedioGral(int sumaNotasAlumnos, int cantAlumnos) {
+//        int prom = sumaNotasAlumnos / cantAlumnos;
+//        return prom;
+//    }
     @Override
-    public String toString() {
-        return "Curso{" + "codigo=" + codigo + ", nivel=" + nivel + ", tipo=" + tipo + '}';
+        public String toString() {
+        String resultado = "";
+        resultado += "Codigo: " + this.codigo + "\n";
+        resultado += "Nivel: " + this.nivel + "\n";
+        resultado += "Tipo: " + this.tipo + "\n";
+        return resultado;
     }
 
     @Override
-    public boolean equals(Object obj) {
+        public boolean equals(Object obj) {
         if (this == obj) {
             return true;
         }
@@ -119,20 +121,16 @@ public class Curso {
             return false;
         }
         final Curso other = (Curso) obj;
-        if (this.nivel != other.nivel) {
+        if (!Objects.equals(this.codigo, other.codigo)) {
             return false;
         }
-        if (!Objects.equals(this.codigo, other.codigo)) {
+        if (!Objects.equals(this.nivel, other.nivel)) {
             return false;
         }
         if (!Objects.equals(this.tipo, other.tipo)) {
             return false;
         }
         return true;
-    }
-
-    boolean tieneEstudiantes() {
-        return estudiantes.size()>0;
     }
 
 }
