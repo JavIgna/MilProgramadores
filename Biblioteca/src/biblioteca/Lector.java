@@ -1,9 +1,15 @@
 package biblioteca;
 
+import java.util.ArrayList;
+
 public class Lector {
-       private String nombre;
-       private String direccionPostal;
-       private String dni;
+
+    private static ArrayList<Prestamo> prestamos = new ArrayList<>();
+    private static ArrayList<PenalizacionLector> penalizacionesLector = new ArrayList<>();
+
+    private String nombre;
+    private String direccionPostal;
+    private String dni;
 
     public Lector(String nombre, String direccionPostal, String dni) {
         this.nombre = nombre;

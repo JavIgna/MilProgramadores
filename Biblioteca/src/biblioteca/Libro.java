@@ -1,6 +1,10 @@
 package biblioteca;
 
+import java.util.ArrayList;
+
 public class Libro {
+    
+    private static ArrayList<Ejemplar> ejemplares = new ArrayList<>();
     private String nombre;
     private String isbn;
 

@@ -1,11 +1,18 @@
 package biblioteca;
 
-public class Biblioteca {
+import java.util.ArrayList;
 
+public class Biblioteca extends Support {
+
+    private static ArrayList<Planta> plantas = new ArrayList<>();
     private String nombre;
 
     public Biblioteca(String nombre) {
-        this.nombre = nombre;
+        if (enRango(2, 50, nombre.length())) {
+            this.nombre = nombre;
+        } else {
+            System.out.println("Los datos ingresados son incorrectos...");
+        }
     }
 
     public String getNombre() {
@@ -19,5 +26,4 @@ public class Biblioteca {
     public static void main(String[] args) {
 
     }
-
 }

@@ -1,10 +1,11 @@
 package biblioteca;
 
-public class TematicaEstanteria {
+public class EstanteriaTematica {
+
     private Estanteria estanteria;
     private Tematica tematica;
 
-    public TematicaEstanteria(Estanteria estanteria, Tematica tematica) {
+    public EstanteriaTematica(Estanteria estanteria, Tematica tematica) {
         this.estanteria = estanteria;
         this.tematica = tematica;
     }

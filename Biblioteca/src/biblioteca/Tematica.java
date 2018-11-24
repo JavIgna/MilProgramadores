@@ -1,6 +1,12 @@
 package biblioteca;
 
+import java.util.ArrayList;
+
 public class Tematica {
+
+    private static ArrayList<EstanteriaTematica> estanteriasTematicas = new ArrayList<>();
+    private static ArrayList<Libro> libros = new ArrayList<>();
+    
     private String nombreTipo;
 
     public Tematica(String nombreTipo) {

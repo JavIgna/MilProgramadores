@@ -1,8 +1,12 @@
 package biblioteca;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Penalizacion {
+    
+    private static ArrayList<PenalizacionLector> penalizacionesLector = new ArrayList<>();
+      
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
 

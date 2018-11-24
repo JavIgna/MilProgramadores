@@ -1,7 +1,10 @@
 package biblioteca;
 
+import java.util.ArrayList;
+
 public class Estanteria {
 
+    private static ArrayList<EstanteriaTematica> estanteriasTematicas = new ArrayList<>();
     private static final int LIMITE = 100;
     private int idEstant;
 
