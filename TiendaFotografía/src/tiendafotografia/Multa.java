@@ -1,0 +1,6 @@
+
+package tiendafotografia;
+
+class Multa {
+    
+}
