@@ -20,4 +20,5 @@ public class Pago {
         this.fecha = fecha;
         this.cantidad = cantidad;
     }
+
 }

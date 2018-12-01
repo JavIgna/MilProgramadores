@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Pasajero {
 
-    //Atributos
     private String nombre;
     private String direccion;
     private String ciudad;

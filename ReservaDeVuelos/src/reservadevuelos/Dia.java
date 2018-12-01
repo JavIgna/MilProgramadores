@@ -16,4 +16,5 @@ public class Dia {
     public Dia(LocalDateTime horaFecha) {
         this.horaFecha = horaFecha;
     }
+
 }

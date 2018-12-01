@@ -13,5 +13,5 @@ public class Asiento {
     public Asiento(int fila, char letra) {
         this.fila = fila;
         this.letra = letra;
-    }
+    }  
 }

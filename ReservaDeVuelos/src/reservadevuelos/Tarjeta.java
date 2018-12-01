@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class Tarjeta {
 
     //Atributos
+
     private String nombre;
     private double numTarjeta;
     private String tipo;

@@ -14,6 +14,7 @@ public class Avion {
     private ArrayList<Vuelo> vuelos = new ArrayList<>();
     
     //Constructores
+
     public Avion(String compania, String tipo, int numPasajeros) {
         this.compania = compania;
         this.tipo = tipo;
