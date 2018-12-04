@@ -10,6 +10,7 @@ public class ReservaDeVuelos {
     public static void main(String[] args) {
         int op = -1;
         int subOp = -1;
+
         do {
             op = menu();
             switch (op) {
@@ -39,6 +40,7 @@ public class ReservaDeVuelos {
                         JOptionPane.showMessageDialog(null,
                                 "Registrate para iniciar sesión.");
 
+                    break;
                 case 2:
                     addUsuario(solicitarUsuario());
                     break;
@@ -49,14 +51,15 @@ public class ReservaDeVuelos {
                 default:
                     JOptionPane.showMessageDialog(null, "La opción ingresada "
                             + "no es válida");
+
             }
         } while (op != 3);
     }
 
     private static int menu() {
         String opcion;
-        opcion = JOptionPane.showInputDialog("::::... S.R.V. ...:::: \n"
-                + "Sistema Reserva de Vuelos \n"
+
+        opcion = JOptionPane.showInputDialog("::::... MENÚ ...:::: \n"
                 + "1.- Iniciar Sesión.\n"
                 + "2.- Registrarse.\n"
                 + "3.- Salir.");
@@ -76,18 +79,13 @@ public class ReservaDeVuelos {
     }
 
     public static Usuario solicitarUsuario() {
-        String correo = JOptionPane.showInputDialog("Ingrese el correo de "
-                + "usuario:");
-        String contrasenia = JOptionPane.showInputDialog("Crea una contraseña "
-                + "de usuario:");
-        String contrasenia2 = JOptionPane.showInputDialog("Reingresa la "
-                + "contraseña de usuario:");
+        String correo = JOptionPane.showInputDialog("Ingrese el correo de usuario:");
+        String contrasenia = JOptionPane.showInputDialog("Crea una contraseña de usuario:");
+        String contrasenia2 = JOptionPane.showInputDialog("Reingresa la contraseña de usuario:");
         do {
             if (!contrasenia.equals(contrasenia2)) {
-                contrasenia = JOptionPane.showInputDialog("Crea una contraseña "
-                        + "de usuario:");
-                contrasenia2 = JOptionPane.showInputDialog("Reingresa la "
-                        + "contraseña de usuario:");
+                contrasenia = JOptionPane.showInputDialog("Crea una contraseña de usuario:");
+                contrasenia2 = JOptionPane.showInputDialog("Reingresa la contraseña de usuario:");
             }
 
             if (contrasenia.equals(contrasenia2)) {

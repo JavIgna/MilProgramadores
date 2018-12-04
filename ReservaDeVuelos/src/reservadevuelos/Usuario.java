@@ -1,6 +1,7 @@
 package reservadevuelos;
 
-public class Usuario {
+
+public class Usuario{
 
     //Atributos
     private String correo;
