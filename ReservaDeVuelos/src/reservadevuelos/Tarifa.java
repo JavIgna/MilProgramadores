@@ -8,7 +8,7 @@ public class Tarifa {
     private double impuestos;
 
     //Relaciones
-    Vuelo vuelo;
+    private Vuelo vuelo;
 
     //Constructores
     public Tarifa(String clase, double precio, double impuestos) {

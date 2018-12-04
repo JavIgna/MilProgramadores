@@ -10,8 +10,8 @@ public class Avion {
     private int numPasajeros;
     
     //Relaciones
-    Aerolinea aerolinea;
-    ArrayList<Vuelo> vuelos = new ArrayList<>();
+    private Aerolinea aerolinea;
+    private ArrayList<Vuelo> vuelos = new ArrayList<>();
     
     //Constructores
 

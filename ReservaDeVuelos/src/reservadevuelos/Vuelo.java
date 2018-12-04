@@ -18,7 +18,6 @@ public class Vuelo {
     private ArrayList<Reserva> reservas = new ArrayList<>();
 
     //Constructores
-
     public Vuelo(int numVuelo, Tarifa tarifa, Dia salida, Dia llegada, Aeropuerto origen, Aeropuerto destino) {
         this.numVuelo = numVuelo;
         this.tarifa = tarifa;
