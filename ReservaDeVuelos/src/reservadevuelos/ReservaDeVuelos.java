@@ -37,10 +37,11 @@ public class ReservaDeVuelos {
                         } while (subOp != 4);
                         break;
                     }
-                        JOptionPane.showMessageDialog(null,
-                                "Registrate para iniciar sesión.");
-
-                    break;
+                    JOptionPane.showMessageDialog(null,
+                            "Registrate para iniciar sesión.");
+                    if (usuarios.size() > 0) {
+                        break;
+                    }
                 case 2:
                     addUsuario(solicitarUsuario());
                     break;
@@ -59,7 +60,8 @@ public class ReservaDeVuelos {
     private static int menu() {
         String opcion;
 
-        opcion = JOptionPane.showInputDialog("::::... MENÚ ...:::: \n"
+        opcion = JOptionPane.showInputDialog("::::... S.R.V ...:::: \n"
+                + "Sistema de Reserva de Vuelos:"
                 + "1.- Iniciar Sesión.\n"
                 + "2.- Registrarse.\n"
                 + "3.- Salir.");
@@ -69,13 +71,25 @@ public class ReservaDeVuelos {
 
     private static int subMenu() {
         String opcion;
-        opcion = JOptionPane.showInputDialog("::::... MENÚ ...:::: \n"
+        opcion = JOptionPane.showInputDialog("::::... Conectado ...:::: \n"
                 + "1.- Consulta de Vuelos.\n"
                 + "2.- Reserva de Vuelos.\n"
                 + "3.- Compra de Billetes.\n"
                 + "4.- Volver.");
         int subOp = Integer.parseInt(opcion);
         return subOp;
+    }
+
+    private static int subSubMenu() {
+        String opcion;
+        opcion = JOptionPane.showInputDialog("::::... C.D.V ...:::: \n"
+                + "Consulta de Vuelos:"
+                + "1.- Horario de Vuelos.\n"
+                + "2.- Tarifas de Vuelos.\n"
+                + "3.- Información de un Vuelo.\n"
+                + "4.- Volver.");
+        int sSubOp = Integer.parseInt(opcion);
+        return sSubOp;
     }
 
     public static Usuario solicitarUsuario() {
