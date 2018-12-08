@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package telollevo;
+package yolollevo;
 
 import java.util.Objects;
 
@@ -12,10 +12,11 @@ import java.util.Objects;
  * @author guillermofuentesquijada
  */
 public class Oficina {
+
     private String codigo;
     private String administrador;
     private String direccion;
-    
+
     private Ciudad ciudad;
 
     public Oficina(String codigo, String administrador, String direccion) {
@@ -82,7 +83,9 @@ public class Oficina {
 
     @Override
     public String toString() {
-        return "Oficina{" + "codigo=" + codigo + ", administrador=" + administrador + ", direccion=" + direccion + '}';
+        return "*********************************\n"
+                + "Oficina código: " + codigo + "\n"
+                + "Administrador: " + administrador + "\n"
+                + "Dirección: " + direccion + "\n";
     }
-    
 }

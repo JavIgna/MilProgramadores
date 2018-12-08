@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package telollevo;
+package yolollevo;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -45,12 +45,12 @@ public class Paquete {
         this.identificador = identificador;
     }
 
-    public String getDescricion() {
+    public String getDescripcion() {
         return descripcion;
     }
 
-    public void setDescricion(String descricion) {
-        this.descripcion = descricion;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public LocalDate getFechaenvio() {
@@ -109,7 +109,7 @@ public class Paquete {
 
     @Override
     public String toString() {
-        return "Paquete{" + "identificador=" + identificador + ", descricion=" + descripcion + ", fechaenvio=" + fechaenvio + ", peso=" + peso + ", costo=" + costo + '}';
+        return "ID: " + identificador + ", Descripcion: " + descripcion + ", Fecha: " + fechaenvio + ", Peso:" + peso + ", Costo: " + costo;
     }
     
     
